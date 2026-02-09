@@ -34,6 +34,7 @@ These rules must be applied in the correct order.
 
 #include <iostream>
 #include <string>
+#include <streamstring>
 
 using namespace std;
 
@@ -178,3 +179,12 @@ void displayFlight(const Flight &flight) {
     cout << "Time Now: " << flight.currentTime << endl;
 	cout << "Status: " << statusToString(flight.status) << endl;
 }
+
+/*
+   string displayFlight(const Flight &flight){
+   stringstream ss;
+   ss << "Flight" << flight.flightNumber << " to " << flight.destination << endl;
+   ss << "status" << statusToString(flight.status) << endl;
+   return ss.str();
+   }
+*/
